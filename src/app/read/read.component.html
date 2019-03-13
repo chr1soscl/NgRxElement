@@ -1,0 +1,7 @@
+<div class="right" *ngIf="elements">
+  <h3>Elements</h3>
+  <ul>
+    <li (click)="deleteElement(i)" *ngFor="let element of elements | async;let i = index;">
+        <a>Key {{element.key}} : Value {{element.value}}</a>
+    </li>
+  </ul>
